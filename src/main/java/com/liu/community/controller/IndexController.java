@@ -5,6 +5,7 @@ import com.liu.community.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
@@ -33,5 +34,10 @@ public class IndexController {
 
 
         return "index";
+    }
+
+    @RequestMapping("/403")
+    public String forbidden(){
+        return "403";
     }
 }
